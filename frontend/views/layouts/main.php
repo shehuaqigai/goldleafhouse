@@ -41,28 +41,36 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-
 <div class="wrap">
-    <?php
-    NavBar::begin([
-        'brandLabel' => 'Gold Leaf Home',
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-default navbar-fixed-top',
-        ],
-    ]);
-    $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
-    ];
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => $menuItems,
-    ]);
-    NavBar::end();
-    ?>
-
+        <nav id="w0" class="navbar-default navbar-fixed-top navbar" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w0-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <i class="glyphicon glyphicon-leaf navbar-brand"></i>
+                    <a class="navbar-brand" href="<?=Url::home();?>">Gold Leaf Home</a>
+                </div>
+                <div id="w0-collapse" class="collapse navbar-collapse">
+                    <ul id="w1" class="navbar-nav navbar-right nav">
+                        <li class="active">
+                            <a href="<?=Url::toRoute(['site/index']);?>">Home</a>
+                        </li>
+                        <li>
+                            <a href="<?=Url::toRoute(['site/about']);?>">About</a>
+                        </li>
+                        <li>
+                            <a href="<?=Url::toRoute(['site/contact']);?>">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+        </div>
     <div class="container">
         <?= $content ?>
     </div>
