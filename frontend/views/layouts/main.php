@@ -52,19 +52,51 @@ AppAsset::register($this);
                         <span class="icon-bar"></span>
                     </button>
                     <i class="glyphicon glyphicon-leaf navbar-brand"></i>
-                    <a class="navbar-brand" href="<?=Url::home();?>">Gold Leaf Home</a>
+                    <a class="navbar-brand" href="<?=Url::home();?>">金叶家园</a>
                 </div>
                 <div id="w0-collapse" class="collapse navbar-collapse">
                     <ul id="w1" class="navbar-nav navbar-right nav">
-                        <li class="active">
-                            <a href="<?=Url::toRoute(['site/index']);?>">Home</a>
+                        <li class="site-index">
+                            <a href="<?=Url::toRoute(['site/index']);?>">
+                                <i class="glyphicon glyphicon-home"></i>
+                                主页
+                            </a>
                         </li>
-                        <li>
-                            <a href="<?=Url::toRoute(['site/about']);?>">About</a>
+                        <!--关于包括更新日志，社区动力，开发团队介绍，联系我们，贡献支持-->
+                        <li class="about">
+                            <a href="<?=Url::toRoute(['about/about']);?>">
+                                <i class="glyphicon glyphicon-certificate"></i>
+                                关于
+                            </a>
                         </li>
-                        <li>
-                            <a href="<?=Url::toRoute(['site/contact']);?>">Contact</a>
+                        <!--商圈包括购物，活动介绍，家政服务-->
+                        <li class="server">
+                            <a href="<?=Url::toRoute(['server/trade-server']);?>">
+                                <i class="glyphicon glyphicon-shopping-cart"></i>
+                                服务
+                            </a>
                         </li>
+                        <!--金叶社区包括，新闻资讯,子女交流,分享,社交,论坛-->
+                        <li class="community">
+                            <a href="<?=Url::toRoute(['community/community']);?>">
+                                <i class="glyphicon glyphicon-grain"></i>
+                                社区
+                            </a>
+                        </li>
+                        <!--金叶社区包括，新闻资讯,子女交流,分享,社交,论坛-->
+                        <li class="event">
+                            <a href="<?=Url::toRoute(['event/event']);?>">
+                                <i class="glyphicon glyphicon-glass"></i>
+                                活动
+                            </a>
+                        </li>
+                        <li class="site-notice">
+                            <a href="<?=Url::toRoute(['site/notice']);?>">
+                                <i class="glyphicon glyphicon-bullhorn"></i>
+                                公告
+                            </a>
+                        </li>
+
                     </ul>
                 </div>
             </div>
