@@ -16,6 +16,9 @@ body {
 .glyphicon-leaf{
     color:green !important;
 }
+#w1 li a{
+    font-size:17px;
+}
 .footer {
     height: 60px;
     background-color: #f5f5f5;
