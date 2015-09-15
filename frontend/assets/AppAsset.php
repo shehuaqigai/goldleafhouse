@@ -24,6 +24,7 @@ class AppAsset extends AssetBundle
     public $js = [
         'js/browser.js',
         'js/yii.js',
+        'js/main.js'
     ];
     public $depends = [
         'frontend\assets\LibAsset'
